@@ -1,0 +1,25 @@
+{
+    "name": "wpc/woocommerce-packaging-checkout",
+    "type": "wordpress-plugin",
+    "description": "Sell packaging products on your woocommerce checkout page",
+    "keywords": [
+        "wordpress",
+        "woocommerce"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jeffrey Sevinga",
+            "email": "sevinga@protonmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "WPC\\Admin\\": "src/admin\/",
+            "WPC\\Frontend\\": "src/frontend\/"
+        }
+    }
+}
