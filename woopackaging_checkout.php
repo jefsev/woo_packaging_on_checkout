@@ -1,6 +1,6 @@
 <?php 
 /**
- * @license  MIT
+ * @license MIT
  */
 
 if ( ! function_exists( 'add_filter' ) ) {
@@ -9,9 +9,9 @@ if ( ! function_exists( 'add_filter' ) ) {
 	exit();
 }
 
-if ( ! defined( 'WOOPACKAGE_CHECKOUT_FILE' ) ) {
-	define( 'WOOPACKAGE_CHECKOUT_FILE', __FILE__ );
+if ( ! defined( 'WPC' ) ) {
+	define( 'WPC', __FILE__ );
 }
 
 // Load the Yoast SEO plugin.
-require_once dirname( WOOPACKAGE_CHECKOUT_FILE ) . '/WPC-plugin.php';
+require_once dirname( WPC ) . '/WPC-plugin.php';
