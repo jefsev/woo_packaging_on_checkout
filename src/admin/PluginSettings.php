@@ -19,13 +19,17 @@ class PluginSettings
 
     /**
 	 * Register the administration menu for this plugin into the WordPress Dashboard menu.
-	 *
-	 * @since {{plugin_version}}
-	 * @return void
 	 */
 	public function add_plugin_admin_menu() {
         $menu_slug = 'wpc-settings';
 		/* Add a settings page for this plugin to the main menu */
-		\add_menu_page( 'WPC Settings', 'WPC Settings', 'manage_options', $menu_slug, false  );
+		\add_menu_page( 'WPC Settings', 'WPC Settings', 'manage_options', $menu_slug, array( $this, 'render_plugin_settings_page' )  );
+	}
+
+    /**
+	 * Render the settings page for this plugin.
+	 */
+	public function render_plugin_settings_page() {
+		include_once plugin_dir_path( WPC_Plugin ) . 'src/admin/views/wpc-settings.php';
 	}
 }
