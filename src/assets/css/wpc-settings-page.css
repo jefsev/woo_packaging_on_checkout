@@ -1,0 +1,18 @@
+#wpcontent {
+    padding-left: 0;
+}
+
+.WPC-setting-page .WPC-header {
+    padding: 20px;
+    background: #fff;
+}
+
+.WPC-setting-page .WPC-header span {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+}
+
+.WPC-settings-content {
+    padding: 25px;
+}

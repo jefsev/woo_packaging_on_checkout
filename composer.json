@@ -18,8 +18,8 @@
     },
     "autoload": {
         "psr-4": {
-            "WPC\\Admin\\": "src/admin\/",
-            "WPC\\Frontend\\": "src/frontend\/"
+            "WPC\\Admin\\": "src/admin/",
+            "WPC\\Frontend\\": "src/frontend/"
         }
     }
 }
