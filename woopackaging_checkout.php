@@ -13,5 +13,5 @@ if ( ! defined( 'WPC' ) ) {
 	define( 'WPC', __FILE__ );
 }
 
-// Load the Yoast SEO plugin.
+// Load the plugin.
 require_once dirname( WPC ) . '/WPC-plugin.php';

@@ -16,9 +16,11 @@
  */
 
 use WPC\Admin\PluginSettings;
+use WPC\Admin\Enqueue;
+
 
 if ( ! defined( 'WPC_Plugin' ) ) {
-	define( 'WPC_Plugin', __FILE__ );
+    define( 'WPC_Plugin', __FILE__ );
 }
 
 /* ***************************** CLASS AUTOLOADING *************************** */
@@ -26,8 +28,13 @@ if ( ! defined( 'WPC_Plugin' ) ) {
 $WPC_autoload_file = plugin_dir_path( WPC_Plugin ) . 'vendor/autoload.php';
 
 if ( is_readable( $WPC_autoload_file ) ) {
-	require $WPC_autoload_file;
+    require $WPC_autoload_file;
 }
 
+
+// Clean this up later when plugin works
 $WPC_settings = new PluginSettings();
 $WPC_settings->initialize();
+
+$WPC_admin_scripts = new Enqueue();
+$WPC_admin_scripts->initialize();

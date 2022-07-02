@@ -32,4 +32,11 @@ class PluginSettings
 	public function render_plugin_settings_page() {
 		include_once plugin_dir_path( WPC_Plugin ) . 'src/admin/views/wpc-settings.php';
 	}
+
+    /**
+	 * Check if woocommerce is installed
+	 */
+    public static function is_woocommerce_activated() {
+        if ( class_exists( 'woocommerce' ) ) { return true; } else { return false; }
+    }
 }
