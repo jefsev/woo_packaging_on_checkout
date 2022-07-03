@@ -7,6 +7,8 @@
 namespace WPC\Admin;
 
 class AjaxAdmin {
+    private $selected_products;
+    private $form_data;
 
 	/**
 	 * Initialize the class.
