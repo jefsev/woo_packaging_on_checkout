@@ -15,26 +15,18 @@
  * Requires PHP:    7.4
  */
 
-use WPC\Admin\PluginSettings;
-use WPC\Admin\Enqueue;
-
-
 if ( ! defined( 'WPC_Plugin' ) ) {
     define( 'WPC_Plugin', __FILE__ );
 }
 
-/* ***************************** CLASS AUTOLOADING *************************** */
-
 $WPC_autoload_file = plugin_dir_path( WPC_Plugin ) . 'vendor/autoload.php';
+$WPC_bootsrap_plugin = plugin_dir_path( WPC_Plugin ) . 'bootstrap/bootstrap.php';
 
 if ( is_readable( $WPC_autoload_file ) ) {
-    require $WPC_autoload_file;
+    // If autoload, requere autoload file
+    require_once $WPC_autoload_file;
+
+    // When autoload file is loaded initialize plugin
+    require_once $WPC_bootsrap_plugin;
 }
 
-
-// Clean this up later when plugin works
-$WPC_settings = new PluginSettings();
-$WPC_settings->initialize();
-
-$WPC_admin_scripts = new Enqueue();
-$WPC_admin_scripts->initialize();
