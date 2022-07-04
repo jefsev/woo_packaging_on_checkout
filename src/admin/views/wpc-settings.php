@@ -36,14 +36,24 @@ $selected_products = get_option( 'wpc_selected_products' );
                     <option value="<? echo $prod->ID; ?>"><?= $title ?></option>
                 <?php }; ?>
                 </select>
-                <span class="btn--ajax" id="add_product">add product</span>
+                <button class="button-primary btn--ajax" id="add_product">add product</button>
             </form>
         <?php } ?>
 
         <div class="product-list" id="products">
-                <?php foreach ($selected_products as $selected_product) { ?>
-                    <span><?= $selected_product ?></span>
-                <?php } ?>
+            <?php foreach ($selected_products as $selected_product) { ?>
+                <div class='product-selected' data-product='<?= $selected_product ?>'>
+                    <div class="row">
+                        <div class="thumb">
+                            <?= get_the_post_thumbnail($selected_product); ?>
+                        </div>
+                        <h3> <?= get_the_title($selected_product); ?></h3>
+                        </div>
+                   <div class="row actions">
+                        <button class='button-secondary'>Remove product</button>
+                   </div>
+                </div>
+            <?php } ?>
         </div>
     </div>
 </div>

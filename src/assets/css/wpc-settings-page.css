@@ -7,6 +7,17 @@
     background: #fff;
 }
 
+.WPC-setting-page .wpc-subtitle {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.WPC-setting-page #wpc-product-form select {
+    width: 450px;
+}
+
 .WPC-setting-page .WPC-header span {
     font-size: 14px;
     font-weight: 700;
@@ -15,4 +26,39 @@
 
 .WPC-settings-content {
     padding: 25px;
+}
+
+.WPC-settings-content .product-list {
+    display: flex;
+    flex-direction: column;
+    padding: 26px 0;
+}
+
+.WPC-settings-content .product-list .product-selected {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-right: 15px;
+    background: #fff;
+}
+
+.WPC-settings-content .product-list .product-selected .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.WPC-settings-content .product-list .product-selected h3 {
+    margin-right: 12px;
+}
+
+.WPC-settings-content .product-list .product-selected .thumb img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 26px;
 }
