@@ -2,7 +2,9 @@
 (($) => {
     "use strict";
 
-    $('#add_product').on('click', () => {
+    $('#add_product').on('click', (e) => {
+        e.preventDefault();
+
         const selected_product = $('#wpc-product-form select option:selected').val();
         const formArgs = {
             action: 'add_product',
