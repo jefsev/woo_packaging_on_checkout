@@ -42,7 +42,7 @@ $selected_products = get_option( 'wpc_selected_products' );
 
         <div class="product-list" id="products">
             <?php foreach ($selected_products as $selected_product) { ?>
-                <div class='product-selected' data-product='<?= $selected_product ?>'>
+                <div class='product-selected'>
                     <div class="row">
                         <div class="thumb">
                             <?= get_the_post_thumbnail($selected_product); ?>
@@ -50,7 +50,7 @@ $selected_products = get_option( 'wpc_selected_products' );
                         <h3> <?= get_the_title($selected_product); ?></h3>
                         </div>
                    <div class="row actions">
-                        <button class='button-secondary'>Remove product</button>
+                        <button class='button-secondary' id="remove_product" data-product='<?= $selected_product ?>'>Remove product</button>
                    </div>
                 </div>
             <?php } ?>
