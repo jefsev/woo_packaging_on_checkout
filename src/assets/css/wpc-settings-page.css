@@ -57,8 +57,8 @@
 }
 
 .WPC-settings-content .product-list .product-selected .thumb img {
-    width: 100px;
-    height: 100px;
+    width: 65px;
+    height: 65px;
     object-fit: cover;
     margin-right: 26px;
 }

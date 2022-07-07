@@ -41,11 +41,15 @@ class AjaxAdmin
      */
     public function remove_product()
     {
-        $return = array(
-            'message' => 'Removed',
-            'ID'      => 2,
-        );
+        $form_data = $_POST['product'];
+        $selected_products = get_option('wpc_selected_products');
 
-        wp_send_json($return);
+        if (in_array($form_data, $selected_products)) {
+            unset($selected_products[array_search($form_data, $selected_products)]);
+        }
+
+        update_option('wpc_selected_products', $selected_products);
+
+        wp_send_json($selected_products);
     }
 }
