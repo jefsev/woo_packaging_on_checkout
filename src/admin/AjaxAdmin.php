@@ -2,6 +2,8 @@
 
 /**
  * Class to Handle AJAX on WPC-settings page
+ * Using WP core option API to save data to the database
+ * @link https://developer.wordpress.org/plugins/settings/options-api/
  */
 
 namespace WPC\Admin;
